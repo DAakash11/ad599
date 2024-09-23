@@ -3,7 +3,11 @@
         <script>
             let doIt = () => {
                 inputText = document.getElementById("usr").value;
-                alert(inputText);
+                if (inputText > 15) {
+                    alert("Weight limit exceeded.");
+                } else {
+                    alert("You are good to go.")
+                }
             }
         </script>
     </head>
