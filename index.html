@@ -28,10 +28,10 @@
 
         // Allow the user to enter the parameters via text boxes and alert them to the output
 
-        let val1 = document.getElementById('val1').value;
-        let val2 = document.getElementById('val2').value;
-        let val3 = document.getElementById('val3').value;
-        doIt = (a, b, n) => {
+        doIt => {
+            let a = document.getElementById('val1').value;
+            let b = document.getElementById('val2').value;
+            let i = document.getElementById('val3').value;
             sum = 0;
             for (let i = 1; i < n; i++) {
                 if (i % a == 0 || i % b == 0) {
