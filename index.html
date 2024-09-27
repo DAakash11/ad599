@@ -1,9 +1,7 @@
 <html>
     <head>
         <script>
-        /*
-        3. Allow the user to enter the parameters via text box(es) and alert them to the output
-        */
+
         // Find the sum of all the multiples of 3 or 5 below 1000.
 
         a = 3, b = 5, n = 1000, sum = 0;
@@ -28,9 +26,30 @@
 
         alert("This is function... " + sumOfNum(3, 5, 1000));
 
+        // Allow the user to enter the parameters via text boxes and alert them to the output
+
+        let val1 = document.getElementById('val1').value;
+        let val2 = document.getElementById('val2').value;
+        let val3 = document.getElementById('val3').value;
+        doIt = (a, b, n) => {
+            sum = 0;
+            for (let i = 1; i < n; i++) {
+                if (i % a == 0 || i % b == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
         </script>
     </head>
     <body>
-        Thank you!
+    <center><pre/>
+        The sum of all the natural numbers below n that are multiples of a or b will be computed...
+        Enter value of a <input id="val1">
+        Enter value of b <input id="val2">
+        Enter value of n <input id="val3">
+        <button onclick="doIt()">Calculate</button>
+    </center>
     </body>
 </html>
