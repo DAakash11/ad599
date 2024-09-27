@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            let doIt = () => {
+                inputText = document.getElementById("usr").value;
+                if (Number(inputText) > 15) {
+                    alert("Weight limit exceeded.");
+                } else {
+                    alert("You are good to go.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <input id="usr">
+        <button onclick="doIt()">Press me</button>
+        </center>
+    </body>
+</html>
