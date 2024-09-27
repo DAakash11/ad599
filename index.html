@@ -27,18 +27,18 @@
         alert("This is function... " + sumOfNum(3, 5, 1000));
 
         // Allow the user to enter the parameters via text boxes and alert them to the output
-
+        alert("Ok..");
         doIt => {
             let a = document.getElementById('val1').value;
             let b = document.getElementById('val2').value;
-            let i = document.getElementById('val3').value;
+            let n = document.getElementById('val3').value;
             sum = 0;
-            for (let i = 1; i < n; i++) {
-                if (i % a == 0 || i % b == 0) {
+            for (let i = 1; i < Number(n); i++) {
+                if (i % Number(a) == 0 || i % Number(b) == 0) {
                     sum += i;
                 }
             }
-            return sum;
+            alert(sum);
         }
 
         </script>
