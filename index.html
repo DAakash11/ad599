@@ -9,18 +9,20 @@
             let a = document.getElementById('val1').value;
             let b = document.getElementById('val2').value;
             let n = document.getElementById('val3').value;
-            sum = 0;
-            for (let i = 1; i < Number(n); i++) {
-                if (i % Number(a) == 0 || i % Number(b) == 0) {
-                    sum += i;
-                }
-            }
             let changing = document.getElementById('changing');
-            a.innerHTML = "";
-            b.innerHTML = "";
-            n.innerHTML = "";
-            changing.innerHTML = "Results " + sum;
-            changing.style.color = "green";
+            if (a != "" && b != "" && n != "") {
+                sum = 0;
+                for (let i = 1; i < Number(n); i++) {
+                    if (i % Number(a) == 0 || i % Number(b) == 0) {
+                        sum += i;
+                    }
+                }
+                a.innerHTML = "";
+                b.innerHTML = "";
+                n.innerHTML = "";
+                changing.innerHTML = "Results " + sum;
+                changing.style.color = "green";
+            }
         }
 
         </script>
