@@ -2,32 +2,6 @@
     <head>
         <script>
 
-        // Find the sum of all the multiples of 3 or 5 below 1000.
-
-        a = 3, b = 5, n = 1000, sum = 0;
-        for (let i = 1; i < n; i++) {
-            if (i % a == 0 || i % b == 0) {
-                sum += i;
-            }
-        }
-        alert("The sum of all the multiples of 3 or 5 below 1000 is " + sum);
-
-        // Create a function to find the sum of all the multiples of a or b below n. (a,b,n) are function parameters
-
-        sumOfNum = (a, b, n) => {
-            sum = 0;
-            for (let i = 1; i < n; i++) {
-                if (i % a == 0 || i % b == 0) {
-                    sum += i;
-                }
-            }
-            return sum;
-        }
-
-        alert("This is function... " + sumOfNum(3, 5, 1000));
-
-        // Allow the user to enter the parameters via text boxes and alert them to the output
-
         doIt = () => {
             let a = document.getElementById('val1').value;
             let b = document.getElementById('val2').value;
@@ -38,7 +12,8 @@
                     sum += i;
                 }
             }
-            alert("Results " + sum);
+            let changing = document.getElementById('changing');
+            changing.innerHTML = "Results " + sum;
         }
 
         </script>
@@ -50,6 +25,7 @@
         Enter value of b <input id="val2">
         Enter value of n <input id="val3">
         <button onclick=doIt()>Calculate</button>
+        <p id="changing"> Waiting for values... </p>
     </center>
     </body>
 </html>
