@@ -2,6 +2,9 @@
     <head>
         <script>
 
+        // Demonstrate some DOM manipulation in the exercise. for example changing the value of a result div, hiding inputs once the button is clicked ...
+
+
         doIt = () => {
             let a = document.getElementById('val1').value;
             let b = document.getElementById('val2').value;
@@ -13,7 +16,11 @@
                 }
             }
             let changing = document.getElementById('changing');
+            a.innerHTML = "";
+            b.innerHTML = "";
+            n.innerHTML = "";
             changing.innerHTML = "Results " + sum;
+            changing.style.color = "green";
         }
 
         </script>
