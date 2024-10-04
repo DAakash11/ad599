@@ -35,13 +35,12 @@ find the sum of all the multiples of a or b in l
 
     a = [3,5];
     sum = 0;
-    for (let i = 0; i < l.length; i++) {
-        for (let j = 0; j < a.length && l[i] % a[j] == 0; j++) {
+    for (let i = 0; i < l.length && l[i] % a[j] == 0; i++) {
+        for (let j = 0; j < a.length; j++) {
             sum += l[i];
-    alert("Second Prblem..." + sum);
         }
     }
-
+    alert("Second Problem..." + sum);
 /*
 c.
 Create a function which takes parameters a,l
