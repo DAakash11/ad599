@@ -29,8 +29,8 @@ find the sum of all the multiples of a or b in l
         sumOfNum = (m, n, o) => {
             sum = 0;
             for (i in o) {
-                if (i % m == 0 || i % n == 0) {
-                    sum += i;
+                if (o[i] % m == 0 || o[i] % n == 0) {
+                    sum += o[i];
                 }
             alert(sum);
             }
