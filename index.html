@@ -34,12 +34,7 @@ find the sum of all the multiples of a or b in l
 */
 
     a = [3,5];
-    sumOfNum2 = (m, o) => {
-        let sum = 0;
-        o.every(x => x % m == 0, sum += x);
-        alert("Second Problem... " + sum);
-    }
-    sumOfNum2(a, l);
+    alert("Second Prblem..." + l.filter(x % a == 0).reduce((w, sum)), sum += w);
 
 /*
 c.
