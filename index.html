@@ -1,39 +1,45 @@
-<html>
-    <head>
-        <script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praticing Programs</title>
+    <script>
 
-        // Demonstrate some DOM manipulation in the exercise. for example changing the value of a result div, hiding inputs once the button is clicked ...
+/*
+Arrays:
+a.
+Create a function which takes parameters a,b,l
+l is a list of integers
+find the sum of all the multiples of a or b in l
 
-        doIt = () => {
-            let a = document.getElementById('val1').value;
-            let b = document.getElementById('val2').value;
-            let n = document.getElementById('val3').value;
-            let changing = document.getElementById('changing');
-            if (a != "" && b != "" && n != "") {
-                sum = 0;
-                for (let i = 1; i < Number(n); i++) {
-                    if (i % Number(a) == 0 || i % Number(b) == 0) {
-                        sum += i;
-                    }
+b.
+Create a function which takes parameters a,l
+a is a list of two integers
+l is a list of integers
+find the sum of all the multiples of a or b in l
+
+c.
+Create a function which takes parameters a,l
+a is a list of integers
+l is a list of integers
+find the sum of all the multiples of a or b in l
+*/
+    
+        a = 3, b = 5;
+        l = [1,2,3,4,5,6,7,8,9,10];
+        sumOfNum = (a, b, n) => {
+            sum = 0;
+            for (let i = 1; i < n; i++) {
+                if (i % a == 0 || i % b == 0) {
+                    sum += i;
                 }
-                a.innerHTML = "";
-                b.innerHTML = "";
-                n.innerHTML = "";
-                changing.innerHTML = "Results " + sum;
-                changing.style.color = "green";
             }
+            return sum;
         }
+        alert(l.reduce(sumOfNum, 0));
 
-        </script>
-    </head>
-    <body>
-    <center><pre/>
-        The sum of all the natural numbers below n that are multiples of a or b will be computed...
-        Enter value of a <input id="val1">
-        Enter value of b <input id="val2">
-        Enter value of n <input id="val3">
-        <button onclick=doIt()>Calculate</button>
-        <p id="changing"> Waiting for values... </p>
-    </center>
-    </body>
+    </script>
+</head>
+<body>
+
+</body>
 </html>
