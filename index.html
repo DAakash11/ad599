@@ -34,7 +34,10 @@ find the sum of all the multiples of a or b in l
 */
 
     a = [3,5];
-    alert("Second Prblem..." + l.filter(x % a == 0).reduce((w, sum)), sum += w);
+    var sum = l.map(function (num, idx) {
+    return num + a[idx];
+    }); 
+    alert("Second Prblem..." + sum);
 
 /*
 c.
