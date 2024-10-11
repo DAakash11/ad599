@@ -18,15 +18,15 @@ and returns the total cost of the basket
     "orange" : 20
     }
     let basket = {
-    "banana" : 2,
-    "orange" : 2      
+    "orange" : 2,
+    "banana" : 2      
     }
 
     let basketCost = (b, p) => {
         let total = 0;
         for (x in b) {
             let show = document.getElementById('items');
-            show.append(b[x] + "" + x + ",");
+            show.textContent += b[x] + "" + x + ",";
             total += b[x] * p[x];
         }
         return total; 
