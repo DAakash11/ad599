@@ -3,38 +3,41 @@
 <head>
     <title>Praticing Programs</title>
     <script>
-        alert("Loaded Basket JS");
 
-        /*
-        Create a function that takes two objects,
-        basket and prices as parameters
-        where basket is a mapping from products (string) to quantities (number)
-        and prices is a mapping from products(String) to prices (number)
-        and returns the total cost of the basket
-        */
-       let prices = {
-        "apple" : 12,
-        "banana" : 30,
-        "cherry" : 15,
-        "orange" : 20
-       }
-       let basket = {
-        "banana" : 2,
-        "orange" : 2      
-       }
+/*
+Create a function that takes two objects,
+basket and prices as parameters
+where basket is a mapping from products (string) to quantities (number)
+and prices is a mapping from products(String) to prices (number)
+and returns the total cost of the basket
+*/
+    let prices = {
+    "apple" : 12,
+    "banana" : 30,
+    "cherry" : 15,
+    "orange" : 20
+    }
+    let basket = {
+    "banana" : 2,
+    "orange" : 2      
+    }
 
-        let basketCost=(b,p)=>{
-            let total = 0;
-            for (x in b) {
-                total += b[x] * p[x];
-            }
-            return total; 
+    let basketCost = (b, p) => {
+        let total = 0;
+        for (x in b) {
+            let show = document.getElementById('items');
+            show.append(b[x] + "" + x + ",");
+            total += b[x] * p[x];
         }
+        return total; 
+    }
 
-        alert(basketCost(basket, prices));
+    alert(basketCost(basket, prices));
+
     </script>
 </head>
 <body>
+    <p id="items">Basket is empty...</p>
 
 </body>
 </html>
