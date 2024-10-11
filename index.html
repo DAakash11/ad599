@@ -18,30 +18,22 @@ and returns the total cost of the basket
     "orange" : 20
     }
     let basket = {
-    "orange" : 2,
-    "banana" : 2      
+    "banana" : 2,
+    "orange" : 2      
     }
-
-    var txt = "Items are ";
 
     let basketCost = (b, p) => {
         let total = 0;
         for (x in b) {
-            txt += b[x] + "" + x + ",";
             total += b[x] * p[x];
         }
         return total; 
     }
 
-    let show = document.getElementById('items');
-    show.innerHTML = txt;
-    
     alert(basketCost(basket, prices));
-
     </script>
 </head>
 <body>
-    <p id="items">Basket is empty...</p>
 
 </body>
 </html>
