@@ -22,16 +22,20 @@ and returns the total cost of the basket
     "banana" : 2      
     }
 
+    var txt = "Items are ";
+
     let basketCost = (b, p) => {
         let total = 0;
-        let show = document.getElementById('items');
         for (x in b) {
-            show.textContent += b[x] + "" + x + ",";
+            txt += b[x] + "" + x + ",";
             total += b[x] * p[x];
         }
         return total; 
     }
 
+    let show = document.getElementById('items');
+    show.innerHTML = txt;
+    
     alert(basketCost(basket, prices));
 
     </script>
