@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praticing Programs</title>
+    <script>
+
+/*
+Arrays:
+a.
+Create a function which takes parameters a,b,l
+l is a list of integers
+find the sum of all the multiples of a or b in l
+*/
+
+    //a = 3, b = 5;
+    var l = [1,2,3,4,5,6,7,8,9,10];
+    fun1 = (m, n, o) => {
+        let sum = 0;
+        for (i in o) {
+            if (o[i] % m == 0 || o[i] % n == 0) {
+                sum += o[i];
+            }
+        }
+        alert("First Problem... " + sum);
+    }
+    //fun1(a, b, l);
+
+/*
+b.
+Create a function which takes parameters a,l
+a is a list of two integers
+l is a list of integers
+find the sum of all the multiples of a in l
+*/
+
+    a = [3,5];
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; (j < l.length) && (l[j] % a[i] == 0); j++) {
+            sum += l[j];
+        }
+    }
+    alert("Problem..." + sum);
+/*
+c.
+Create a function which takes parameters a,l
+a is a list of integers
+l is a list of integers
+find the sum of all the multiples of a in l
+*/
+    
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
