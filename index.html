@@ -24,8 +24,8 @@ and returns the total cost of the basket
 
     let basketCost = (b, p) => {
         let total = 0;
+        let show = document.getElementById('items');
         for (x in b) {
-            let show = document.getElementById('items');
             show.textContent += b[x] + "" + x + ",";
             total += b[x] * p[x];
         }
