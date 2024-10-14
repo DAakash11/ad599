@@ -25,6 +25,7 @@ and returns the total cost of the basket
     let basketCost = (b, p) => {
         let total = 0;
         for (x in b) {
+            console.log(x + " : " + b[x]);
             total += b[x] * p[x];
         }
         return total; 
